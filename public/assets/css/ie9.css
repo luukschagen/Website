@@ -72,7 +72,7 @@
 	}
 
 	.post > footer .stats {
-		display: inline-block;
+		display: none !important;
 		margin-left: 2em;
 	}
 
