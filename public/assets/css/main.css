@@ -2135,6 +2135,10 @@
 			
 		}
 
+		.single .image.featured {
+			max-height: 450px;
+		}
+
 		#singlefeatured {
 			overflow: hidden;
 		}
