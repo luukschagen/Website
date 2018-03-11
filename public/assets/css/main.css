@@ -1709,7 +1709,7 @@
 		-ms-transition: background-color 0.2s ease, box-shadow 0.2s ease, color 0.2s ease;
 		transition: background-color 0.2s ease, box-shadow 0.2s ease, color 0.2s ease;
 		background-color: transparent;
-		border: 0;
+		border: 1px grey solid;
 		box-shadow: inset 0 0 0 1px rgba(160, 160, 160, 0.3);
 		color: #3c3b3b !important;
 		cursor: pointer;
@@ -1832,8 +1832,12 @@
 
 /* Form */
 
+	.email {
+		margin: 0 0 1em 0;
+	}
+
 	form {
-		margin: 0 0 2em 0;
+		margin: 0 0 1em 0;
 	}
 
 		form.search {
@@ -1887,7 +1891,7 @@
 		appearance: none;
 		background: rgba(160, 160, 160, 0.075);
 		border: none;
-		border: solid 1px rgba(160, 160, 160, 0.3);
+		border: solid 2px grey;
 		border-radius: 0;
 		color: inherit;
 		display: block;
@@ -2125,11 +2129,19 @@
 		.image.featured {
 			display: block;
 			margin: 0 0 3em 0;
+			max-height: 350px;
 			width: 100%;
+			height: auto;
+			
+		}
+
+		#singlefeatured {
+			overflow: hidden;
 		}
 
 			.image.featured img {
 				width: 100%;
+				overflow: hidden;
 			}
 
 			@media screen and (max-width: 736px) {
@@ -3170,7 +3182,7 @@
 		margin: 0 auto;
 		max-width: 100%;
 		opacity: 1;
-		padding: 4.5em;
+		padding: 0em;
 		width: 90em;
 	}
 
@@ -3204,7 +3216,7 @@
 
 		body.single #wrapper {
 			display: block;
-		}
+		}	
 
 /* Main */
 

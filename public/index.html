@@ -11,8 +11,10 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1" />
 		<!--[if lte IE 8]><script src="assets/js/ie/html5shiv.js"></script><![endif]-->
 		<link rel="stylesheet" href="assets/css/main.css" />
+		<link href="//cdn-images.mailchimp.com/embedcode/slim-10_7.css" rel="stylesheet" type="text/css">
 		<!--[if lte IE 9]><link rel="stylesheet" href="assets/css/ie9.css" /><![endif]-->
 		<!--[if lte IE 8]><link rel="stylesheet" href="assets/css/ie8.css" /><![endif]-->
+
 	</head>
 	<body>
 
@@ -27,6 +29,7 @@
 								<li><a href="index.html">Home</a></li>
 								<li><a href='gallery.html'>Gallery</a></li>
 								<li><a href='about.html'>About</a></li>
+								<li><a href='about.html#mail'>Mailing List</a></li>
 							</ul>
 						</nav>
 						<nav class="main">
@@ -60,6 +63,12 @@
 										<a href="about.html">
 											<h3>About</h3>
 											<p>Wait, so who is this guy? Find out here!</p>
+										</a>
+									</li>
+									<li>
+										<a href="about.html#mail">
+											<h3>Mailing list</h3>
+											<p>Sign up for the Email list to stay up to date!</p>
 										</a>
 									</li>
 								</ul>
@@ -136,9 +145,30 @@
 								<h2>About</h2>
 								<p>So what is all this about anyway? I guess I try to explain that below.</p>
 								<ul class="actions">
-									<li><a href="#" class="button">Learn More</a></li>
+									<li><a href='about.html' class="button">Learn More</a></li>
 								</ul>
 							</section>
+
+							<!-- Begin MailChimp Signup Form -->
+							<style type="text/css">
+								#mc_embed_signup{background:#fff; clear:left; font:14px Helvetica,Arial,sans-serif; }
+								/* Add your own MailChimp form style overrides in your site stylesheet or in this style block.
+								   We recommend moving this block and the preceding CSS link to the HEAD of your HTML file. */
+							</style>
+							<div class="blurb form">
+								<h2>Mailing List</h2>
+								<p>If you fill in your e-mail adres below, you will automagically receive an e-mail whenever I update the blog. Should you be interested</p>
+								<form action="https://blog.us17.list-manage.com/subscribe/post?u=e0ddb470c159143e115d173c8&amp;id=4f58cf9cc5" method="post" target="_blank" novalidate>
+							    	<div id="row uniform">
+										<input type="email" value="" name="EMAIL" class="email" id="mce-EMAIL" placeholder="email address" required>
+							    	<!-- real people should not fill this in and expect good things - do not remove this or risk form bot signups-->
+							    		<div style="position: absolute; left: -5000px;" aria-hidden="true"><input type="text" name="b_e0ddb470c159143e115d173c8_4f58cf9cc5" tabindex="-1" value=""></div>
+							    		<div class="actions"><input type="submit" value="Subscribe" name="subscribe" id="mc-embedded-subscribe" class="button"></div>
+							    	</div>
+								</form>
+							</div>
+
+<!--End mc_embed_signup-->
 
 						<!-- Footer -->
 							<section id="footer">
@@ -162,6 +192,8 @@
 			<script src="assets/js/util.js"></script>
 			<!--[if lte IE 8]><script src="assets/js/ie/respond.min.js"></script><![endif]-->
 			<script src="assets/js/main.js"></script>
+			<script type="text/javascript" src="//downloads.mailchimp.com/js/signup-forms/popup/embed.js" data-dojo-config="usePlainJson: true, isDebug: false"></script>
+			<script type="text/javascript">require(["mojo/signup-forms/Loader"], function(L) { L.start({"baseUrl":"mc.us17.list-manage.com","uuid":"e0ddb470c159143e115d173c8","lid":"4f58cf9cc5"}) })</script>
 
 	</body>
 </html>
