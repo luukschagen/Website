@@ -3149,8 +3149,12 @@
 
 		@media screen and (max-width: 980px) {
 
-			#header .links {
+			#header h1 {
 				display: none;
+			}
+
+			#header .links {
+				margin-left: 0;
 			}
 
 		}
@@ -3170,6 +3174,14 @@
 					display: none;
 				}
 
+		}
+
+		@media screen and (max-width: 480px) {
+
+			#header .links ul li{
+				margin-left: 0;
+				border: none;
+			}
 		}
 
 /* Wrapper */
