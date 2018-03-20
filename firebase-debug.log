@@ -71,3 +71,43 @@
 [info] i  hosting: Serving hosting files from: public
 [info] ✔  hosting: Local server: http://localhost:5000
 
+[debug] [2018-03-20T13:08:25.479Z] ----------------------------------------------------------------------
+[debug] [2018-03-20T13:08:25.482Z] Command:       /usr/local/Cellar/node/9.8.0/bin/node /usr/local/bin/firebase experimental:functions:shell
+[debug] [2018-03-20T13:08:25.482Z] CLI Version:   3.17.6
+[debug] [2018-03-20T13:08:25.482Z] Platform:      darwin
+[debug] [2018-03-20T13:08:25.482Z] Node Version:  v9.8.0
+[debug] [2018-03-20T13:08:25.483Z] Time:          Tue Mar 20 2018 15:08:25 GMT+0200 (SAST)
+[debug] [2018-03-20T13:08:25.483Z] ----------------------------------------------------------------------
+[debug] 
+[debug] [2018-03-20T13:08:25.500Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2018-03-20T13:08:25.501Z] > authorizing via signed-in user
+[debug] [2018-03-20T13:08:25.503Z] > refreshing access token with scopes: ["email","https://www.googleapis.com/auth/cloud-platform","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","openid"]
+[debug] [2018-03-20T13:08:25.503Z] >>> HTTP REQUEST POST https://www.googleapis.com/oauth2/v3/token  
+ { refresh_token: '1/JncxFsoA0CyWEHD7-1ralQjec_AHG81mF9atbjqHC45k9PtmKbERegylHskQEXHs',
+  client_id: '563584335869-fgrhgmd47bqnekij5i8b5pr03ho849e6.apps.googleusercontent.com',
+  client_secret: 'j9iVZfS8kkCEFUPaAeJV0sAi',
+  grant_type: 'refresh_token',
+  scope: 'email https://www.googleapis.com/auth/cloud-platform https://www.googleapis.com/auth/cloudplatformprojects.readonly https://www.googleapis.com/auth/firebase openid' } 
+ Tue Mar 20 2018 15:08:25 GMT+0200 (SAST)
+[debug] [2018-03-20T13:08:26.135Z] <<< HTTP RESPONSE 200
+[debug] [2018-03-20T13:08:26.144Z] >>> HTTP REQUEST GET https://admin.firebase.com/v1/projects/luuk-stellenbosch-experience  
+  
+ Tue Mar 20 2018 15:08:26 GMT+0200 (SAST)
+[debug] [2018-03-20T13:08:27.676Z] <<< HTTP RESPONSE 200
+[debug] [2018-03-20T13:08:27.677Z] >>> HTTP REQUEST GET https://admin.firebase.com/v1/database/luuk-stellenbosch-experience/tokens  
+  
+ Tue Mar 20 2018 15:08:27 GMT+0200 (SAST)
+[debug] [2018-03-20T13:08:28.793Z] <<< HTTP RESPONSE 200
+[debug] [2018-03-20T13:08:30.037Z] Error: EACCES: permission denied, mkdir '/usr/local/lib/node_modules/firebase-tools/node_modules/@google-cloud/functions-emulator/logs'
+    at Object.fs.mkdirSync (fs.js:909:18)
+    at Object.assertLogsPath (/usr/local/lib/node_modules/firebase-tools/node_modules/@google-cloud/functions-emulator/src/emulator/logs.js:65:10)
+    at new Controller (/usr/local/lib/node_modules/firebase-tools/node_modules/@google-cloud/functions-emulator/src/cli/controller.js:77:32)
+    at FunctionsEmulator.start (/usr/local/lib/node_modules/firebase-tools/lib/functionsEmulator.js:104:21)
+    at Command._action (/usr/local/lib/node_modules/firebase-tools/commands/functions-shell.js:26:21)
+    at /usr/local/lib/node_modules/firebase-tools/lib/command.js:176:29
+    at tryCatch (/usr/local/lib/node_modules/firebase-tools/node_modules/rsvp/dist/rsvp.js:525:12)
+    at invokeCallback (/usr/local/lib/node_modules/firebase-tools/node_modules/rsvp/dist/rsvp.js:538:13)
+    at publish (/usr/local/lib/node_modules/firebase-tools/node_modules/rsvp/dist/rsvp.js:508:7)
+    at flush (/usr/local/lib/node_modules/firebase-tools/node_modules/rsvp/dist/rsvp.js:2415:5)
+[error] 
+[error] Error: An unexpected error has occurred.
