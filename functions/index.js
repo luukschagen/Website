@@ -1,5 +1,12 @@
+//Initializations
+const admin = require('firebase-admin');
 const functions = require('firebase-functions');
 
+admin.initializeApp(functions.config().firebase);
+
+var db = admin.firestore();
+
+//END OF INITIALIZATIONS
 // // Create and Deploy Your First Cloud Functions
 // // https://firebase.google.com/docs/functions/write-firebase-functions
 //
@@ -8,19 +15,17 @@ const functions = require('firebase-functions');
 // });
 
 
-
 exports.storageWatcher = functions.storage.object().onChange((event) => {
 	var location = event.data.selfLink;
 	console.log(location);
 	var path = [];
 	var string;
-	for (var i = location.length-1; i >= 0; i--) {
+	for (var i = location.length-2; i >= 0; i--) {
 		var char = location[i];
-		console.log(char);
-		if (char === '/'){
+		var sep = location[i-2]+location[i-1]+location[i]
+		if (char === '/' || sep === '%2F'){
 			path.push(string);
-			string = '';
-			console.log(path);
+			string = '';	
 		}
 		else {
 			string = char + string;
