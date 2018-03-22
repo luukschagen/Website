@@ -14,25 +14,30 @@ var db = admin.firestore();
 //  response.send("Hello from Firebase!");
 // });
 
-
-exports.storageWatcher = functions.storage.object().onChange((event) => {
-	var location = event.data.selfLink;
-	console.log(location);
+function parser(location){
 	var path = [];
-	var string;
-	for (var i = location.length-2; i >= 0; i--) {
+	var string = '';
+	for (var i = location.length-1; i >= 0; i--) {
 		var char = location[i];
 		var sep = location[i-2]+location[i-1]+location[i]
 		if (char === '/' || sep === '%2F'){
 			path.push(string);
-			string = '';	
+			if (string === 'o'){
+				break;
+			}
+			string = '';
+			if (sep === '%2F'){
+				i -= 2;
+			}	
 		}
 		else {
 			string = char + string;
-			console.log(string);
 		}
 	}
 	console.log(path);
+}
+
+exports.storageWatcher = functions.storage.object().onChange((event) => {
+	var location = event.data.selfLink;
+	parser(location);
 });
-
-
