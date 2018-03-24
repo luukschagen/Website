@@ -2255,10 +2255,6 @@
 					padding-right: 0;
 				}
 
-			ul.actions.pagination {
-				display: none !important;
-			}
-
 			ul.actions.pagination .next {
 				text-decoration: none;
 			}
