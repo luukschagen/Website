@@ -3478,3 +3478,31 @@
 			}
 
 		}
+
+		.opacity > #wrapper {
+			opacity: 0.15;
+		}
+
+		.image.selected {
+			display: flex !important;
+			max-width: 10000px !important;
+			max-height: 10000px !important;
+			width: 100% !important;
+			height: 100% !important;
+			position: fixed !important;
+			top: 0 !important;
+			left: 0 !important;
+			align-items: center !important;
+			justify-content: center !important;
+			z-index: 10000 !important;
+
+		}
+
+		.image.selected img {
+			width: 10000px !important;
+			height: 10000px !important;
+			max-width: 95% !important;
+			max-height: 95% !important;
+			opacity: 1 !important;
+			object-fit: contain !important;
+		}

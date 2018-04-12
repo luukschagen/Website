@@ -1,0 +1,32 @@
+[debug] [2018-04-12T18:04:24.419Z] ----------------------------------------------------------------------
+[debug] [2018-04-12T18:04:24.422Z] Command:       /usr/local/Cellar/node/9.8.0/bin/node /usr/local/bin/firebase serve --only hosting
+[debug] [2018-04-12T18:04:24.423Z] CLI Version:   3.17.7
+[debug] [2018-04-12T18:04:24.423Z] Platform:      darwin
+[debug] [2018-04-12T18:04:24.423Z] Node Version:  v9.8.0
+[debug] [2018-04-12T18:04:24.424Z] Time:          Thu Apr 12 2018 20:04:24 GMT+0200 (SAST)
+[debug] [2018-04-12T18:04:24.424Z] ----------------------------------------------------------------------
+[debug] 
+[debug] [2018-04-12T18:04:24.442Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2018-04-12T18:04:24.442Z] > authorizing via signed-in user
+[debug] [2018-04-12T18:04:24.445Z] >>> HTTP REQUEST GET https://admin.firebase.com/v1/projects/luuk-stellenbosch-experience  
+  
+ Thu Apr 12 2018 20:04:24 GMT+0200 (SAST)
+[debug] [2018-04-12T18:04:38.384Z] <<< HTTP RESPONSE 200
+[debug] [2018-04-12T18:04:38.385Z] >>> HTTP REQUEST GET https://admin.firebase.com/v1/database/luuk-stellenbosch-experience/tokens  
+  
+ Thu Apr 12 2018 20:04:38 GMT+0200 (SAST)
+[debug] [2018-04-12T18:04:42.698Z] <<< HTTP RESPONSE 200
+[debug] [2018-04-12T18:04:42.700Z] >>> HTTP REQUEST GET https://cloudresourcemanager.googleapis.com/v1/projects/luuk-stellenbosch-experience  
+  
+ Thu Apr 12 2018 20:04:42 GMT+0200 (SAST)
+[debug] [2018-04-12T18:04:49.336Z] <<< HTTP RESPONSE 200
+[info] 
+[info] === Serving from '/Users/luukschagen/Documents/Projecten/Website'...
+[info] 
+[debug] [2018-04-12T18:04:49.341Z] >>> HTTP REQUEST GET https://mobilesdk-pa.googleapis.com/v1/projects/303921280364/clients/_:getWebAppConfig  
+  
+ Thu Apr 12 2018 20:04:49 GMT+0200 (SAST)
+[debug] [2018-04-12T18:05:14.516Z] <<< HTTP RESPONSE 200
+[info] i  hosting: Serving hosting files from: public
+[info] ✔  hosting: Local server: http://localhost:5000
+
