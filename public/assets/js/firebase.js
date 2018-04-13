@@ -22,8 +22,3 @@ $(function() {
   const $footer = $('#footer').load('/templates/footer.html');
 
 })
-
-
-  
-
-

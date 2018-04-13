@@ -1,0 +1,17 @@
+{
+  "name": "admin",
+  "version": "1.0.0",
+  "description": "",
+  "main": "admin.js",
+  "scripts": {
+    "test": "console.log('hello');"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@google-cloud/storage": "^1.6.0",
+    "fd": "0.0.3",
+    "firebase-admin": "^5.12.0",
+    "io.js": "0.0.0"
+  }
+}
