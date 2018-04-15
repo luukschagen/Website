@@ -24,6 +24,12 @@ function listFiles(err, filenames){
 		for (var i = 0; i < filenames.length; i++) {
 			files[i] = path+filenames[i]
 		}
-		console.log(files);
+		readFiles(files);
+	}
+}
+
+function readFiles(filelist){
+	for (var i = 0; i < filelist.length; i++) {
+		fs.readFile(filelist[i], )
 	}
 }

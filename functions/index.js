@@ -18,18 +18,30 @@ var bucket = admin.storage().bucket();
 exports.uploadWatcher = functions.storage.object().onFinalize((object)=>{
 	let objectlink = object.selfLink;
 	let name = object.name;
-	let medialink = object.mediaLink;
-	let metadata = object.metadata;
-	console.log(metadata);
-	try {
-		let metanumber = Number(metadata);
+	let basename = name.split('/')[1];
+	if (name.includes('images')){
+		db.collection('images').doc(basename).set({
+			link: objectlink
+		});
 	}
-	catch (error) {
-		let metanumber = 0;
+	else if (name.includes('blogposts')){
+		let number = name[name.length-6]
+		db.collection('blogposts').doc(basename).set({
+			link: objectlink,
+			num: number,
+		});
 	}
-	db.collection('images').doc(name).set({
-		link: objectlink,
-		media: medialink,
-		meta: metanumber,
-	});
+});
+
+exports.deleteWatcher = functions.storage.object().onDelete((object)=>{
+	let objectlink = object.selfLink;
+	let name = object.name;
+	let basename = name.split('/')[1];
+	if (name.includes('images')){
+		db.collection('images').doc(basename).delete();
+	}
+	else if (name.includes('blogposts')){
+		let number = name[name.length-6]
+		db.collection('blogposts').doc(basename).delete();
+	}
 });
