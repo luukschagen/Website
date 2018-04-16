@@ -7,8 +7,9 @@ var config = {
     messagingSenderId: "303921280364"
   };
 
-  var app = firebase.initializeApp(config);
-  var storage = app.storage();
+var app = firebase.initializeApp(config);
+var storage = app.storage();
+var db = firebase.firestore();
 
 $(function() {
 
@@ -21,4 +22,16 @@ $(function() {
   const $menu = $('#menu').load('/templates/menu.html');
   const $footer = $('#footer').load('/templates/footer.html');
 
+  //get images from db
+
+  db.collection('images').get().then(snapshot => {
+    snapshot.forEach(image => {
+      
+      let imageLink = image.get('link');
+      let imageRef = storage.refFromURL(imageLink);
+      imageRef.getDownloadURL().then(url => {
+        console.log(url);
+      });
+    })
+  })
 })
